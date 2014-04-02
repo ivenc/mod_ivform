@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>IVENC Form</name>
+    <author>IVENC, LLC</author>
+    <authorUrl>ivenc.com</authorUrl>
+    <creationDate>10 March 2014</creationDate>
+    <version>0.0.5</version>
+    <copyright>Copyright (C) 2014 IVENC, LLC. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+    <description>MOD_IVFORM_DESCRIPTION</description>
+    <files>
+        <filename>mod_ivform.xml</filename>
+        <filename module="mod_ivform">mod_ivform.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>lib</folder>
+    </files>
+    <languages>
+		<language tag="ru-RU">ru-RU.mod_ivform.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ivform.sys.ini</language>
+	</languages>
+    <config> 
+        <fields name="params">> 
+            <fieldset name="basic">
+            	<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="emailTo"
+                    type="email"
+                    label="MOD_IVFORM_EMAILTO"
+                    description="MOD_IVFORM_EMAILTO_DESCRIPTION"
+                    default="" />               
+                <field
+                    name="emailBcc"
+                    type="email"
+                    label="MOD_IVFORM_EMAILBCC"
+                    description="MOD_IVFORM_EMAILBCC_DESCRIPTION"
+                    default="" />
+                <field 
+                	name="mailSubject" 
+                	type="text"
+                	label="MOD_IVFORM_MAILSUBJECT"
+                	description=""
+                	default="[ Заявка с сайта ]"
+                	size="50" />
+                <field
+                    name="fromName"
+                    type="text"
+                    label="MOD_IVFORM_FROMNAME"
+                    description="MOD_IVFORM_FROMNAME_DESCRIPTION"
+                    default="" 
+                    size="50" />
+                <field
+                    name="fromEmail"
+                    type="email"
+                    label="MOD_IVFORM_FROMEMAIL"
+                    description="MOD_IVFORM_FROMEMAIL_DESCRIPTION"
+                    default="" />
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+        </fields>      
+    </config>
+</extension>
