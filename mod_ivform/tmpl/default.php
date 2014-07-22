@@ -8,6 +8,31 @@ $br = "<br/>";
 //echo "e-mail:".$emailTo.$br;
 //echo "form text:".$formText.$br; 
 
+/*
+$config = JFactory::getConfig();
+$sender = array( 
+    $config->getValue( 'config.mailfrom' ),
+    $config->getValue( 'config.fromname' ) );
+$mailer = JFactory::getMailer(); 
+$mailer->setSender($sender);
+$recipient = array( 'info@ivenc.com', 'varion.pro@gmail.com');//, 'person2@domain.com', 'person3@domain.com' );
+$mailer->addRecipient($recipient);
+
+$body   = '<h2>Our mail</h2>'
+    . '<div>A message to our dear readers</div>';
+$mailer->isHTML(true);
+$mailer->Encoding = 'base64';
+$mailer->setBody($body);
+// Optionally add embedded image
+//$mailer->AddEmbeddedImage( JPATH_COMPONENT.'/assets/logo128.jpg', 'logo_id', 'logo.jpg', 'base64', 'image/jpeg' );
+$send = $mailer->Send();
+if ( $send !== true ) {
+    echo 'Error sending email: ' . $send->__toString();
+} else {
+    echo 'Mail sent';
+}
+ * 
+ */
 ?>
 <h3>Отправьте нам заявку:</h3>
 <div class="formblock" style="margin-right: 15px;">
@@ -47,4 +72,4 @@ $br = "<br/>";
 	?>
 	</form>
 </div>
-<?php if ($isSend) {echo '<h4 style="color:green;">Ваш запрос отправлен. Спасибо!</h4>';} ?>
+<?php if ($ivform -> isSend) {echo '<h4 style="color:green;">Ваш запрос отправлен. Спасибо!</h4>';} ?>

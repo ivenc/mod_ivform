@@ -218,8 +218,15 @@ class IVForm {
 		$headers .= 'Bcc: '.join(',', $this -> arrEmailBcc) . "\r\n";//скрытая копия: можно несколько адресов через запятую 
 		
 		// Отправляем
-		mail($to, $this -> subject, $message, $headers);
+		$sendResult = mail($to, $this -> subject, $message, $headers);
 		
 		$this -> isSend = true;
 	}
+        
+        public function sendByJoomla() {
+		if ((count($this -> arrErrors) != 0)  ||  ($this -> isFirstLaunch)) {
+			//были ошибоки или первый запуск
+			return;
+		}
+        }
 }
