@@ -7,7 +7,7 @@
 * @link http://ivenc.com
 * @license        GNU/GPL
 */
- 
+
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
  
