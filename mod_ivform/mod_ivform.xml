@@ -30,13 +30,15 @@
                     type="email"
                     label="MOD_IVFORM_EMAILTO"
                     description="MOD_IVFORM_EMAILTO_DESCRIPTION"
-                    default="" />               
+                    default="" 
+                    size="50" />               
                 <field
                     name="emailBcc"
                     type="email"
                     label="MOD_IVFORM_EMAILBCC"
                     description="MOD_IVFORM_EMAILBCC_DESCRIPTION"
-                    default="" />
+                    default="" 
+                    size="50" />
                 <field 
                     name="mailSubject" 
                     type="text"
@@ -56,7 +58,8 @@
                     type="email"
                     label="MOD_IVFORM_FROMEMAIL"
                     description="MOD_IVFORM_FROMEMAIL_DESCRIPTION"
-                    default="" />
+                    default=""
+                    size="50" />
             </fieldset>
             <fieldset
                 name="advanced">
